@@ -1,0 +1,54 @@
+name: NoNamedOrg
+description: A fun plugin Requested by @paldiu
+version: 1.0
+
+main: me.jacklin213.nonamedorg.NoNamedOrg
+author: jacklin213
+
+commands:
+  flex:
+    description: Flex!
+    usage: /flex
+  hex:
+    description: Hex yourself or another Player
+    usage: /hex [player]
+    aliases: h
+  devme:
+    description:
+    usage: /devme
+  nno:
+    description: States the plugins version and description
+    usage: /nno
+  shutdown:
+    description: Shutdown the server!
+    usage: /shutdown
+  
+permissions:
+  nonamedorg.*:
+    description: Gives you permissions for ALL commands
+    default: false
+    children:
+      nonamedorg.flex: true
+      nonamedorg.hex: true
+      nonamedorg.hex.other: true
+      nonamedorg.devme: true
+      nonamedorg.nno: true
+      nonamedorg.shutdown: false
+  nonamedorg.flex:
+    description: Permission to use /flex
+    default: true
+  nonamedorg.hex:
+    description: Permission to hex yourself
+    default: true
+  nonamedorg.hex.other:
+    description: Permission to hex others
+    default: op
+  nonamedorg.devme:
+    description: Gives you permissions for ALL commands
+    default: true
+  nonamedorg.nno:
+    description: Gives you permissions for ALL commands
+    default: true
+  nonamedorg.shutdown:
+    description: Gives you permissions for ALL commands
+    default: true
